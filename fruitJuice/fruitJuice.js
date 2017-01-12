@@ -21,7 +21,58 @@ Complete the functions in order to provide this functionality.
 */
 
 function Jar() {
-  // TODO
+	var jar = {}, total = 0;
+  return {
+  	add: function(amountNo, typeOfJuiceStr){
+  		if (_.isEmpty(jar)){
+  			total += amountNo;
+  			return jar[ typeOfJuiceStr ] = amountNo;
+  		}
+  		else {
+	  		for (var key in jar){
+	  			if (jar[ typeOfJuiceStr ]){
+	  				total += amountNo;
+	  				return jar [ typeOfJuiceStr ] += amountNo;
+  				}
+  				else {
+  					total += amountNo;
+  					return jar [ typeOfJuiceStr ] = amountNo;
+  					}
+  			}
+  		}
+  	},
+  	getConcentration: function (typeOfJuiceStr){
+  		if (_.isEmpty(jar)){
+  			return "Jar is Empty"
+  		}
+  		else {
+	  		for (var key in jar){
+	  			if (jar [ typeOfJuiceStr ]){
+	  				return "Percentage of " + typeOfJuiceStr + " is " + Math.floor((jar [ typeOfJuiceStr ] / total) * 100) + "%";
+	  			}
+	  			else {
+	  				return "Not Found"
+	  			}
+	  		}
+	  	}
+  	},
+  	getTotalAmount: function (){
+  		return "Total amount of Juice in jar is: " + total;
+  	},
+  	spillJuice: function(amountNo, typeOfJuiceStr){
+  		if (total === 0){
+  			return "Jar is Empty"
+  		}
+  		else {
+  			var amountToBeRemoved = amountNo/total.length;
+	  		for (var key in jar){
+	  			 jar[ key ] -= amountToBeRemoved;
+	  				total -= amountNo;
+	  				jar [ typeOfJuiceStr ] -= amountNo;
+  			}
+  		}
+  	}
+  }
 }
 
 /*
