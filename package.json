@@ -1,0 +1,27 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "closures.js",
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "eslint": "^3.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-google": "^0.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmerAlOmari/cohort2-toy-problems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmerAlOmari/cohort2-toy-problems/issues"
+  },
+  "homepage": "https://github.com/AmerAlOmari/cohort2-toy-problems#readme"
+}
